@@ -344,7 +344,7 @@ resource "aws_s3_bucket" "default" {
   bucket = "demo-cicd-codepipeline-ecs"
   acl    = "private"
 
-  tags {
+  tags = {
     Name        = "Demo"
     Environment = "Demo"
   }
