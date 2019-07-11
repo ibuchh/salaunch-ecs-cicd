@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "network" {
-  source = "modules/network"
+  source = "./modules/network"
   environment = "${var.environment}"
   vpc_cidr = "${var.vpc_cidr}"
   private_subnet_cidrs = "${var.private_subnet_cidrs}"
@@ -12,7 +12,7 @@ module "network" {
 }
 
 module "ecs" {
-  source = "modules/ecs"
+  source = "./modules/ecs"
   repo_owner = "${var.repo_owner}"
   repo_name = "${var.repo_name}"
   github_oauth_token = "${var.github_oauth_token}"
